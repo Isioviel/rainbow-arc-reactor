@@ -23,8 +23,8 @@ while True:
         for pixel in range(0, len(np)):
             np[pixel] = colours[pixel]
         np.show()
-        colours.append(colours.pop(0))
-        colours.append(colours.pop(0))
+        for x in range(0, 2):
+            colours.append(colours.pop(0))
         sleep(500)
         if duck == True:
             display.show(Image.DUCK)
